@@ -106,6 +106,40 @@ Equations for implementing the LSTM block
 <br /> *(16, 4)*
 <br /> *(16, 4)*
 
+## Gated Recurrent Unit ( GRU )
+
+Gate recurrent units (GRUs) are a type of RNN whose principle is to use gate mechanisms to selectively update the hidden state at each time step, allowing them to retain important information and eliminate irrelevant details. GRU is a simplified version of LSTM architectures and consists of two main gates: the update gate and the reset gate.
+* Update gate zt: this gate decides how much information from the previous hidden state h (t-1) should be retained for the next
+* Reset Gate rt: This gate determines how much of the hidden state from the past h (t-1) should be forgotten.
+<img width="1140" height="903" alt="image" src="https://github.com/user-attachments/assets/71077324-0fe7-4db2-8abc-04e0d3146083" />
+Ecuațiile de implementare a blocul GRU
+<br /><img width="226" height="18" alt="image" src="https://github.com/user-attachments/assets/0651d6f7-fbf9-477d-9561-c791e47f0f80" />  Update Gate
+<br /><img width="224" height="18" alt="image" src="https://github.com/user-attachments/assets/683bbcfd-0469-412e-91f3-ae697fa3b475" />  Reset Gate
+<br /><img width="270" height="19" alt="image" src="https://github.com/user-attachments/assets/d1910a96-9b5e-417c-b956-f4467d705ac3" />
+<br /><img width="277" height="27" alt="image" src="https://github.com/user-attachments/assets/902d0629-11e8-457c-81f3-dad431cf63d5" />  Ouput
+
+*A simple approach :*
+<br /> *# Define sample input shape (e.g., 16 sequences, 5 time steps, 3 features)*
+<br /> *batch_size = 16*
+<br /> *time_steps = 5*
+<br /> *features = 3*
+<br /> *input_data = tf.random.normal((batch_size, time_steps, features), dtype = tf.float32)*
+<br /> *print(input_data.shape)*
+<br /> *# number of units per layer*
+<br /> *units_size_per_layer  = 4*
+<br /> *GRU_whole_sequence_output, GRU_final_memory_state = GRU(units_size_per_layer, return_sequences=True, return_state=True, unroll=True)(input_data)*
+<br /> *print(GRU_whole_sequence_output.shape)*
+<br /> *print(GRU_final_memory_state.shape)*
+<br /> *(16, 5, 3)*
+<br /> *(16, 5, 4)*
+<br /> *(16, 4)*
+
+
+
+
+
+
+
   
 ## Bibliographer
 
