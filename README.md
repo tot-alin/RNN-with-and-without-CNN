@@ -44,6 +44,12 @@ Taking the idea illustrated on the right side of the diagram above, the distribu
 
 <img width="1216" height="573" alt="image" src="https://github.com/user-attachments/assets/e0caa73f-022e-4cd4-893f-be066ea7429b" />
 
+## Simple RNN
+
+SimpleRNN is the simplest form of the recurrent neural networks. Its functionality is achieved by combining the input features of sequence t1 with the features emitted by the previous sequence t <img width="54" height="18" alt="image" src="https://github.com/user-attachments/assets/aab7cee7-cef8-4237-b077-eff5b4fa2ed2" /> and activated with a hyperbolic tangent. The equation of the activation function is <img width="144" height="18" alt="image" src="https://github.com/user-attachments/assets/83479a47-5f8f-4cf3-9b4f-87898fd663ac" />
+
+Equations for implementing the SimpleRNN block
+<img width="243" height="18" alt="image" src="https://github.com/user-attachments/assets/7b936ff8-369c-4f2d-ae26-6e086efa3815" />
 
 
   
