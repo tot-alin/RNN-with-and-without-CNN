@@ -88,7 +88,24 @@ Equations for implementing the LSTM block
 <br /><img width="124" height="23" alt="image" src="https://github.com/user-attachments/assets/e91ddbcd-e3a4-4b45-9847-394763a5fb59" />  - Cell State
 <br /><img width="147" height="23" alt="image" src="https://github.com/user-attachments/assets/afa6cf35-46e8-49ed-b569-755d789e6dc1" />  - Output gate
 
-  
+*A simple approach :*
+<br /> *# Define sample input shape (e.g., 16 sequences, 5 time steps, 3 features)*
+<br /> *batch_size = 16*
+<br /> *time_steps = 5*
+<br /> *features = 3*
+<br /> *input_data = tf.random.normal((batch_size, time_steps, features), dtype = tf.float32)*
+<br /> *print(input_data.shape)*
+<br /> *# number of units per layer*
+<br /> *units_size_per_layer  = 4*
+<br /> *LSTM_whole_sequence_output, LSTM_final_memory_state, LSTM_final_carry_state = LSTM(units_size_per_layer, return_sequences=True, return_state=True)(input_data)*
+<br /> *print(LSTM_whole_sequence_output.shape)*
+<br /> *print(LSTM_final_memory_state.shape)*
+<br /> *print(LSTM_final_carry_state.shape)*
+<br /> *(16, 5, 3)*
+<br /> *(16, 5, 4)*
+<br /> *(16, 4)*
+<br /> *(16, 4)*
+
   
 ## Bibliographer
 
