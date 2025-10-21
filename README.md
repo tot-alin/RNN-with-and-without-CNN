@@ -5,9 +5,14 @@ implementing six models (three RNN models and three RNN + CNN models) designed t
 classify 12 human actions (at night). names_class : ['Drink', 'Picking', 'Push', 'Run', 'Throwing
 objects', 'boxing', 'lifting weights', 'receiving the phone', 'stand', 'walking on stairs', 'walking
 with flashlight', 'waving']
+<br />
+<br />
 
-## Download dataset (download_data.ipynb)
+## Download dataset 
 The dataset is 'https://www.kaggle.com/api/v1/datasets/download/lakavathakshay/noctact-har', used in this project, contains 6613 .mp4 videos of up to 15 seconds.
+(download_data.ipynb)
+<br />
+<br />
 
 ## Data preprocessing
 Data preparation for processing is performed in the __video_to_dataset.ipynb__  file using the  __video_convert__  class. This class has the following features:
@@ -20,6 +25,8 @@ Data preparation for processing is performed in the __video_to_dataset.ipynb__  
 * generation of the data set for validation
 * generating a small test data set (normally, the test set should be much larger, but in this case, it is used to test functionality)
 * method of saving data sets on physical media
+<br />
+<br />
 
 ## Recurrent neural networks (RNN)
 
@@ -34,6 +41,8 @@ Taking the idea illustrated on the right side of the diagram above, the distribu
 <p align="center">
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/e0caa73f-022e-4cd4-893f-be066ea7429b" />
 </p>
+<br />
+<br />
 
 ## Simple RNN
 
@@ -61,7 +70,8 @@ Equations for implementing the SimpleRNN block
 <br />*(16, 5, 3)*
 <br />*(16, 5, 4)*
 <br />*(16, 4)*
-
+<br />
+<br />
 
 ## Long Short-Term Memory ( LSTM )
 
@@ -100,6 +110,9 @@ Equations for implementing the LSTM block
 <br /> *(16, 5, 4)*
 <br /> *(16, 4)*
 <br /> *(16, 4)*
+<br />
+<br />
+
 
 ## Gated Recurrent Unit ( GRU )
 
@@ -130,6 +143,9 @@ The implementation equations of the GRU block
 <br /> *(16, 5, 3)*
 <br /> *(16, 5, 4)*
 <br /> *(16, 4)*
+<br />
+<br />
+
 
 ## Time distributed layer
 
@@ -137,6 +153,9 @@ TimeDistributed is a method whereby a certain layer, method function, etc., can 
 <p align="center">
 <img width="450" height="200" alt="image" src="https://github.com/user-attachments/assets/bc190453-7569-40ce-b4ca-d528d38d6440" />
 </p>
+<br />
+<br />
+
  
 ## Description of models
 The six models were designed to highlight the functionality of RNNs in the context of their use in models involving the analysis of actions in a video recording. To this end, three models were created that use only the three types of RNN, namely SimpleRNN, LSTM, and GRU. As can be seen in the diagram below, these models are composed of three RNN layers and a final Dense layer.
@@ -156,17 +175,25 @@ The six models were designed to highlight the functionality of RNNs in the conte
 <br />CNN_GRU_model - Trainable params: 8,920,780 (34.03 MB)
 
 <br />**It should be noted that the descriptions of the Input, MaxPooling2...., and other methods have been omitted !**
+<br />
+<br />
 
 ## Comparative diagram of the loss function for the 6 models created
 <br /><img width="1630" height="855" alt="image" src="https://github.com/user-attachments/assets/ad718f4d-7f53-4c32-bfaa-ba54a4d31888" />
+<br />
+<br />
 
 ## Comparative diagram of efficiency (prediction accuracy) for the six models created
 <br /><img width="1621" height="855" alt="image" src="https://github.com/user-attachments/assets/5c1a93a8-1fec-4658-a003-74f70df3eeb5" />
+<br />
+<br />
 
 ## Confusion matrices for models built with RNN
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/f8f08148-c14d-4c3a-9733-b89eae57ff6a" />
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/5006129c-338e-466c-a8d9-201258e977fa" />
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/06b2c64a-1bdd-4b9a-94a2-1c68742a96fe" />
+<br />
+<br />
 
 ## Confusion matrices for models built with RNN and CNN
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/16accff8-4fdd-4a71-b55c-db11fd174ad5" />
