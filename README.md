@@ -73,7 +73,20 @@ Equations for implementing the SimpleRNN block
 ## Long Short-Term Memory ( LSTM )
 
 Long Short-Term Memory (LSTM) is an improved version of simple Recurrent Neural Networks. The main difference between SimpleRNN and LSTM is that, in addition to the hidden state taken from the previous sequence and concatenated with the input features corresponding to the time sequence, LSTM networks have a memory cell with extended information as a period (Cell State).
+<img width="1366" height="796" alt="image" src="https://github.com/user-attachments/assets/e7499695-16f1-4337-9d3f-93acd499674a" />
 
+The architecture of LSTM networks consists of three gates:
+* Forget gate: determines what information is deleted from the cell memory
+* Input gate: controls what information is added to the cell memory
+* Output gate: controls what information comes out of the cell memory
+
+Equations for implementing the LSTM block
+<br /><img width="258" height="24" alt="image" src="https://github.com/user-attachments/assets/fc0d0b95-b970-42c1-ba10-91a4f186d883" />  - Forget gate
+<br /><img width="246" height="18" alt="image" src="https://github.com/user-attachments/assets/560b33d7-0674-48ce-a46d-9cc5d10d72ae" />  - Input gate
+<br /><img width="232" height="19" alt="image" src="https://github.com/user-attachments/assets/c7078c1f-9746-435e-a874-612b81c2efd9" />
+<br /><img width="253" height="18" alt="image" src="https://github.com/user-attachments/assets/215326a8-7ab2-4e14-99e5-7635b3a870bd" />
+<br /><img width="124" height="23" alt="image" src="https://github.com/user-attachments/assets/e91ddbcd-e3a4-4b45-9847-394763a5fb59" />  - Cell State
+<br /><img width="147" height="23" alt="image" src="https://github.com/user-attachments/assets/afa6cf35-46e8-49ed-b569-755d789e6dc1" />  - Output gate
 
   
   
