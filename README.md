@@ -49,8 +49,25 @@ Taking the idea illustrated on the right side of the diagram above, the distribu
 SimpleRNN is the simplest form of the recurrent neural networks. Its functionality is achieved by combining the input features of sequence t1 with the features emitted by the previous sequence t <img width="54" height="18" alt="image" src="https://github.com/user-attachments/assets/aab7cee7-cef8-4237-b077-eff5b4fa2ed2" /> and activated with a hyperbolic tangent. The equation of the activation function is <img width="144" height="18" alt="image" src="https://github.com/user-attachments/assets/83479a47-5f8f-4cf3-9b4f-87898fd663ac" />
 
 Equations for implementing the SimpleRNN block
-<img width="243" height="18" alt="image" src="https://github.com/user-attachments/assets/7b936ff8-369c-4f2d-ae26-6e086efa3815" />
 
+<br /> <img width="243" height="18" alt="image" src="https://github.com/user-attachments/assets/7b936ff8-369c-4f2d-ae26-6e086efa3815" />
+<img width="897" height="754" alt="image" src="https://github.com/user-attachments/assets/f37fc8aa-5172-4aaf-9015-6892a2ab3e5a" />
+
+*A simple approach :*
+<br /> *# Define sample input shape (e.g., 16 sequences, 5 time steps, 3 features)*
+<br /> *batch_size = 16*
+<br /> *time_steps = 5*
+<br /> *features = 3*
+<br />*input_data = tf.random.normal((batch_size, time_steps, features), dtype = tf.float32)*
+<br /> *print(input_data.shape)*
+<br />*# number of units per layer*
+<br />*units_size_per_layer  = 4*
+<br />*SimpleRNN_whole_sequence_output, SimpleRNN_final_memory_state = SimpleRNN(units_size_per_layer, return_sequences=True, return_state=True)(input_data)*
+<br />*print(SimpleRNN_whole_sequence_output.shape)*
+<br />*print(SimpleRNN_final_memory_state.shape)*
+<br />*(16, 5, 3)*
+<br />*(16, 5, 4)*
+<br />*(16, 4)*
 
   
   
