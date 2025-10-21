@@ -112,7 +112,7 @@ Gate recurrent units (GRUs) are a type of RNN whose principle is to use gate mec
 * Update gate zt: this gate decides how much information from the previous hidden state h (t-1) should be retained for the next
 * Reset Gate rt: This gate determines how much of the hidden state from the past h (t-1) should be forgotten.
 <img width="1140" height="903" alt="image" src="https://github.com/user-attachments/assets/71077324-0fe7-4db2-8abc-04e0d3146083" />
-Ecuațiile de implementare a blocul GRU
+The implementation equations of the GRU block
 <br /><img width="226" height="18" alt="image" src="https://github.com/user-attachments/assets/0651d6f7-fbf9-477d-9561-c791e47f0f80" />  Update Gate
 <br /><img width="224" height="18" alt="image" src="https://github.com/user-attachments/assets/683bbcfd-0469-412e-91f3-ae697fa3b475" />  Reset Gate
 <br /><img width="270" height="19" alt="image" src="https://github.com/user-attachments/assets/d1910a96-9b5e-417c-b956-f4467d705ac3" />
