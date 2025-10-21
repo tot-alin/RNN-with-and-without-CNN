@@ -134,9 +134,11 @@ The implementation equations of the GRU block
 <br /> *(16, 5, 4)*
 <br /> *(16, 4)*
 
+## Time distributed layer
 
+TimeDistributed is a method whereby a certain layer, method function, etc., can be executed successively with different input characteristics, returning a number of results equal to the number of inputs. This method is used, for example, in processing data series, video frames, audio sequences, etc., where each time step is treated independently with the same method. For example, the figure below shows the successive approach of a CNN layer using TimeDistributed.
 
-
+<img width="901" height="400" alt="image" src="https://github.com/user-attachments/assets/bc190453-7569-40ce-b4ca-d528d38d6440" />
 
 
 
