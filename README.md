@@ -137,8 +137,40 @@ The implementation equations of the GRU block
 ## Time distributed layer
 
 TimeDistributed is a method whereby a certain layer, method function, etc., can be executed successively with different input characteristics, returning a number of results equal to the number of inputs. This method is used, for example, in processing data series, video frames, audio sequences, etc., where each time step is treated independently with the same method. For example, the figure below shows the successive approach of a CNN layer using TimeDistributed.
-
 <img width="901" height="400" alt="image" src="https://github.com/user-attachments/assets/bc190453-7569-40ce-b4ca-d528d38d6440" />
+## Description of models
+The six models were designed to highlight the functionality of RNNs in the context of their use in models involving the analysis of actions in a video recording. To this end, three models were created that use only the three types of RNN, namely SimpleRNN, LSTM, and GRU. As can be seen in the diagram below, these models are composed of three RNN layers and a final Dense layer.
+<img width="922" height="574" alt="image" src="https://github.com/user-attachments/assets/3f1b1c19-6116-42a9-9c52-684802ac93db" />
+<br /> *SimpleRNN_model - Trainable params: 29,523,564 (112.62 MB)*
+<br /> *LSTM_model - Trainable params: 118,093,068 (450.49 MB)*
+<br /> *GRU_model - Trainable params: 88,570,572 (337.87 MB)*
+Due to the large input characteristics, i.e., 10 time steps containing 240x320x3 frames, the parameter matrices are very large, as can be seen above. One solution for improving the efficiency of models containing RNN networks for predicting datasets composed of video recordings is to use CNN networks in the composition of the models. Thus, three other models were created by extending the models mentioned above using the TimeDistributed method, in which a CNN layer was integrated. The diagram below shows the approach of the three new models.
+<br /><img width="1290" height="600" alt="image" src="https://github.com/user-attachments/assets/23631400-bb56-480a-b21a-ff1b421c1096" />
+<br />CNN_SimpleRNN_model - Trainable params: 3,089,004 (11.78 MB)
+<br />CNN_LSTM_model - Trainable params: 11,835,660 (45.15 MB)
+<br />CNN_GRU_model - Trainable params: 8,920,780 (34.03 MB)
+**It should be noted that the descriptions of the Input, MaxPooling2...., and other methods have been omitted !**
+
+## Comparative diagram of the loss function for the 6 models created
+<img width="1630" height="855" alt="image" src="https://github.com/user-attachments/assets/ad718f4d-7f53-4c32-bfaa-ba54a4d31888" />
+
+## Comparative diagram of efficiency (prediction accuracy) for the six models created
+<img width="1621" height="855" alt="image" src="https://github.com/user-attachments/assets/5c1a93a8-1fec-4658-a003-74f70df3eeb5" />
+
+## Confusion matrices for models built with RNN
+<br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/f8f08148-c14d-4c3a-9733-b89eae57ff6a" />
+<br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/5006129c-338e-466c-a8d9-201258e977fa" />
+<br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/06b2c64a-1bdd-4b9a-94a2-1c68742a96fe" />
+
+## Confusion matrices for models built with RNN and CNN
+<img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/16accff8-4fdd-4a71-b55c-db11fd174ad5" />
+<img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/6cecae01-5f0e-46b8-b4dd-74b39b571ddd" />
+<img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/25969561-22e0-429f-9e6d-834163bb71a0" />
+
+
+
+
+
 
 
 
