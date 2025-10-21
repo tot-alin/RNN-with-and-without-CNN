@@ -37,12 +37,14 @@ Data preparation for processing is performed in the __video_to_dataset.ipynb__  
 Recurrent neural networks (RNNs) are neural networks used especially for time series or models whose predictions are based on data sets that have the characteristic of a chain of successive phenomena, such as sequences of film, sound, text, etc.
 
 Recurrent neural networks (RNNs) have an architecture similar to artificial neural networks (ANNs), but unlike ANNs, RNNs use the same weights in each run sequence, while also passing on a feature emitted by the previous sequence, i.e., HL t1  combined with the characteristics from sequence HL t2
-
-<img width="1107" height="449" alt="image" src="https://github.com/user-attachments/assets/964b6058-b843-421c-880f-92df7aabbd16" />
+<p align="center">
+<img width="550" height="220" alt="image" src="https://github.com/user-attachments/assets/964b6058-b843-421c-880f-92df7aabbd16" />
+</p>
 
 Taking the idea illustrated on the right side of the diagram above, the distribution of the data set ordered over a length of time (xt) in the cells of the RNN network is illustrated in the diagram below. It should be noted that in the case of multiple RNN layers, y’t (the prediction from the current layer) becomes the input feature of the upper layer, i.e., xt.
-
-<img width="1216" height="573" alt="image" src="https://github.com/user-attachments/assets/e0caa73f-022e-4cd4-893f-be066ea7429b" />
+<p align="center">
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/e0caa73f-022e-4cd4-893f-be066ea7429b" />
+</p>
 
 ## Simple RNN
 
@@ -51,7 +53,9 @@ SimpleRNN is the simplest form of the recurrent neural networks. Its functionali
 Equations for implementing the SimpleRNN block
 
 <br /> <img width="243" height="18" alt="image" src="https://github.com/user-attachments/assets/7b936ff8-369c-4f2d-ae26-6e086efa3815" />
-<img width="897" height="754" alt="image" src="https://github.com/user-attachments/assets/f37fc8aa-5172-4aaf-9015-6892a2ab3e5a" />
+<p align="center">
+<img width="450" height="400" alt="image" src="https://github.com/user-attachments/assets/f37fc8aa-5172-4aaf-9015-6892a2ab3e5a" />
+</p>
 
 *A simple approach :*
 <br /> *# Define sample input shape (e.g., 16 sequences, 5 time steps, 3 features)*
@@ -76,6 +80,7 @@ Long Short-Term Memory (LSTM) is an improved version of simple Recurrent Neural 
 <p align="center">
 <img width="680" height="400" alt="image" src="https://github.com/user-attachments/assets/e7499695-16f1-4337-9d3f-93acd499674a" />
 </p>
+
 The architecture of LSTM networks consists of three gates:
 * Forget gate: determines what information is deleted from the cell memory
 * Input gate: controls what information is added to the cell memory
@@ -121,7 +126,7 @@ The implementation equations of the GRU block
 <br /><img width="270" height="19" alt="image" src="https://github.com/user-attachments/assets/d1910a96-9b5e-417c-b956-f4467d705ac3" />
 <br /><img width="277" height="27" alt="image" src="https://github.com/user-attachments/assets/902d0629-11e8-457c-81f3-dad431cf63d5" />  Ouput
 
-*A simple approach :*
+<br />*A simple approach :*
 <br /> *# Define sample input shape (e.g., 16 sequences, 5 time steps, 3 features)*
 <br /> *batch_size = 16*
 <br /> *time_steps = 5*
