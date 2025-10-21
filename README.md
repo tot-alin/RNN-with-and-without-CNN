@@ -32,6 +32,20 @@ Data preparation for processing is performed in the __video_to_dataset.ipynb__  
 * generating a small test data set (normally, the test set should be much larger, but in this case, it is used to test functionality)
 * method of saving data sets on physical media
 
+## Recurrent neural networks (RNN)
+
+Recurrent neural networks (RNNs) are neural networks used especially for time series or models whose predictions are based on data sets that have the characteristic of a chain of successive phenomena, such as sequences of film, sound, text, etc.
+
+Recurrent neural networks (RNNs) have an architecture similar to artificial neural networks (ANNs), but unlike ANNs, RNNs use the same weights in each run sequence, while also passing on a feature emitted by the previous sequence, i.e., HL t1  combined with the characteristics from sequence HL t2
+
+<img width="1107" height="449" alt="image" src="https://github.com/user-attachments/assets/964b6058-b843-421c-880f-92df7aabbd16" />
+
+Taking the idea illustrated on the right side of the diagram above, the distribution of the data set ordered over a length of time (xt) in the cells of the RNN network is illustrated in the diagram below. It should be noted that in the case of multiple RNN layers, y’t (the prediction from the current layer) becomes the input feature of the upper layer, i.e., xt.
+
+<img width="1216" height="573" alt="image" src="https://github.com/user-attachments/assets/e0caa73f-022e-4cd4-893f-be066ea7429b" />
+
+
+
   
   
 ## Bibliographer
