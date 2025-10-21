@@ -199,13 +199,8 @@ The six models were designed to highlight the functionality of RNNs in the conte
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/16accff8-4fdd-4a71-b55c-db11fd174ad5" />
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/6cecae01-5f0e-46b8-b4dd-74b39b571ddd" />
 <br /><img width="2000" height="700" alt="image" src="https://github.com/user-attachments/assets/25969561-22e0-429f-9e6d-834163bb71a0" />
-
-
-
-
-
-
-
+<br />
+<br />
 
   
 ## Bibliographer
