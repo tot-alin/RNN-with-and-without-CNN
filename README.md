@@ -6,19 +6,8 @@ classify 12 human actions (at night). names_class : ['Drink', 'Picking', 'Push',
 objects', 'boxing', 'lifting weights', 'receiving the phone', 'stand', 'walking on stairs', 'walking
 with flashlight', 'waving']
 
+## Download dataset (download_data.ipynb)
 The dataset is 'https://www.kaggle.com/api/v1/datasets/download/lakavathakshay/noctact-har', used in this project, contains 6613 .mp4 videos of up to 15 seconds.
-
-The project contains:
-* Download dataset (download_data.ipynb)
-* Data reprocessing(video_to_dataset.ipynb)
-* Model created with SimpleRNN and description of SimpleRNN networks
-* Model created with LSMT and description of LSMT networks
-* Model created with GRU and description of GRU networks
-* Model created with SimpleRNN + CNN
-* Model created with LSMT + CNN
-* Model created with GRU + CNN
-* Comparison of the results obtained
-* [RNN with and without CNN.pdf](https://github.com/user-attachments/files/21918238/RNN.with.and.without.CNN.pdf)
 
 ## Data preprocessing
 Data preparation for processing is performed in the __video_to_dataset.ipynb__  file using the  __video_convert__  class. This class has the following features:
