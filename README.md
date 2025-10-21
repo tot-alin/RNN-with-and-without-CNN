@@ -20,8 +20,21 @@ The project contains:
 * Comparison of the results obtained
 * [RNN with and without CNN.pdf](https://github.com/user-attachments/files/21918238/RNN.with.and.without.CNN.pdf)
 
+## Data preprocessing
+Data preparation for processing is performed in the __video_to_dataset.ipynb__  file using the  __video_convert__  class. This class has the following features:
+* Creating the database, i.e., retrieving information from the directory structure containing the films (indexing characteristics and indexing labe
+* Changing image size in two steps:
+  * Define the desired image ratio between width and height by adding values of 0, as the case may be, left and right, or top and bottom
+  * changing the resolution of images to the desired form
+* extracting the desired number of frames so that the captured frames are distributed evenly  over the length of the film
+* generating the training dataset
+* generation of the data set for validation
+* generating a small test data set (normally, the test set should be much larger, but in this case, it is used to test functionality)
+* method of saving data sets on physical media
+
   
-Bibliographer
+  
+## Bibliographer
 
 * https://www.datacamp.com/tutorial/tutorial-for-recurrent-neural-network
 * https://www.exxactcorp.com/blog/Deep-Learning/recurrent-neural-networks-rnn-deep-learning-for-sequential-data
