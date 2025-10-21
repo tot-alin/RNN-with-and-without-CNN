@@ -69,6 +69,12 @@ Equations for implementing the SimpleRNN block
 <br />*(16, 5, 4)*
 <br />*(16, 4)*
 
+
+## Long Short-Term Memory ( LSTM )
+
+Long Short-Term Memory (LSTM) is an improved version of simple Recurrent Neural Networks. The main difference between SimpleRNN and LSTM is that, in addition to the hidden state taken from the previous sequence and concatenated with the input features corresponding to the time sequence, LSTM networks have a memory cell with extended information as a period (Cell State).
+
+
   
   
 ## Bibliographer
